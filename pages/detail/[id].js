@@ -1,10 +1,10 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 
 export default function Detail({ restaurant }) {
     const { name, description, pictureId, menus: { foods, drinks } } = restaurant;
     return (
         <div className='container'>
-            <Image src={`https://restaurant-api.dicoding.dev/images/large/${pictureId}`} alt={name} />
+            <img src={`https://restaurant-api.dicoding.dev/images/large/${pictureId}`} alt={name} />
 
             <header>
                 <h1>{name}</h1>

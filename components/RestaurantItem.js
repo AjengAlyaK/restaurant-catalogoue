@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 const RestaurantItem = ({ id, pictureId, name, description }) => {
     return (
         <div className="card">
-            <Image src={`https://restaurant-api.dicoding.dev/images/small/${pictureId}`} alt={name} />
+            <img src={`https://restaurant-api.dicoding.dev/images/small/${pictureId}`} alt={name} />
     
             <div className="container">
                 <h2><Link href={`/detail/${id}`}>{name}</Link></h2>
